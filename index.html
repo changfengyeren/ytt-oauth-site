@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ytt — 个人视频上传工具</title>
+<style>
+:root{color-scheme:light dark;font-family:system-ui,sans-serif;line-height:1.75}
+body{max-width:760px;margin:64px auto;padding:0 24px}h1{font-size:2.5rem;line-height:1.2}
+a{color:#2879ce}code{font-size:.95em}footer{margin-top:48px;border-top:1px solid #999;padding-top:20px}
+</style>
+<main>
+<h1>ytt</h1>
+<p>ytt 是一个供项目所有者个人使用的视频上传工具。它从所有者配置的 OpenList 网盘读取选定的视频，再通过 YouTube Data API 上传到所有者授权的频道。</p>
+<h2>工作方式</h2>
+<p>程序运行在所有者管理的 Google Cloud 虚拟机上。视频按块读取和上传。程序保存传输进度，以便在连接中断后继续上传。完整视频不作为临时文件保存在虚拟机中。</p>
+<h2>Google 账号授权</h2>
+<p>所有者在 Google 授权页面选择频道，并授予以下权限：</p>
+<ul>
+<li><code>youtube.upload</code>：上传所选视频。</li>
+<li><code>youtube.readonly</code>：读取频道身份和视频处理状态。</li>
+</ul>
+<p>上传默认使用私有可见性。所有者可以在上传命令中选择其他可见性。此页面只介绍应用，不接收账号授权、网盘凭据或视频文件。</p>
+<p><a href="privacy.html">阅读隐私政策</a></p>
+</main>
+<footer>个人使用项目 · <a href="https://github.com/changfengyeren">项目所有者</a> · 更新日期：2026-11-10</footer>
+</html>
