@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ytt 隐私政策</title>
+<style>
+:root{color-scheme:light dark;font-family:system-ui,sans-serif;line-height:1.75}
+body{max-width:760px;margin:64px auto;padding:0 24px}h1{font-size:2.2rem;line-height:1.2}
+a{color:#2879ce}footer{margin-top:48px;border-top:1px solid #999;padding-top:20px}
+</style>
+<main>
+<p><a href="index.html">返回 ytt 应用主页</a></p>
+<h1>ytt 隐私政策</h1>
+<p>更新日期：2026-11-10。ytt 供项目所有者个人使用。本政策说明当前应用如何处理 Google 账号数据和上传文件。</p>
+<h2>访问的数据与用途</h2>
+<p>ytt 使用 Google OAuth 读取所授权 YouTube 频道的编号和名称，以确认上传目标。它读取上传视频的元数据和处理状态，以确认上传结果。它使用视频上传权限，把所有者选定的文件和填写的标题、说明、可见性发送到 YouTube。</p>
+<h2>存储与传输</h2>
+<p>OAuth 客户端配置和刷新令牌保存在所有者的本机和专用 Google Cloud 虚拟机中。虚拟机上的凭据目录仅允许服务账号和系统管理员访问。程序通过 HTTPS 调用 Google API。</p>
+<p>OpenList 网盘凭据保存在所有者管理的 OpenList 数据目录中。上传程序按块读取视频内容，并将这些内容发送到 Google 的 YouTube 服务。程序不保存完整的临时视频文件。任务记录保存源文件路径、文件大小、部分内容校验值、进度、标题、说明、上传会话和结果。上传完成后，程序从任务记录中移除上传会话地址。</p>
+<h2>数据共享</h2>
+<p>程序把所选视频和相关元数据发送到 YouTube，以完成所有者要求的上传。视频可见性取决于所有者选择的设置，默认值为私有。程序不向广告平台出售或提供账号数据，也不使用这些数据训练模型。</p>
+<p>应用介绍网站由 GitHub Pages 托管。该网站不接收 OAuth 凭据或视频内容。GitHub 可能为提供托管服务和保障安全而记录访问者的 IP 地址。有关这些访问日志，请参阅 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>。</p>
+<h2>保留、撤销与删除</h2>
+<p>凭据和任务记录保留在所有者的设备及虚拟机中，直到所有者删除。所有者可以在 <a href="https://myaccount.google.com/connections">Google 账号的第三方连接页面</a>撤销 ytt 的访问权限。撤销后，程序不能继续刷新授权令牌。</p>
+<p>如需删除本地数据，所有者可以删除专用凭据和任务记录。已上传的视频保存在 YouTube 中；如需删除这些视频，所有者应在 YouTube Studio 中操作。</p>
+<h2>联系</h2>
+<p>该个人项目由 <a href="https://github.com/changfengyeren">changfengyeren</a> 管理。有关账号授权或本机数据的问题，由项目所有者在其控制的设备和 Google 账号中处理。</p>
+</main>
+<footer><a href="index.html">ytt 应用主页</a></footer>
+</html>
